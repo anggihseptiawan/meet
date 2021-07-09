@@ -6,7 +6,7 @@ echo '🏗️👷 Styling, testing and building your project before committing'
 # Check ESLint AirBnb Standards
 npm run lint ||
 (
-    echo '🤢🤮🤢🤮 Yoo, your code looks disgusting. Check linter 🤢🤮🤢🤮
+    echo '🙈👷🔨❌ Yoo, your code looks disgusting. Check linter 🙈👷🔨❌
           Run npm run lint, add changes and try commit again.';
     false;
 )
@@ -30,7 +30,7 @@ npm run type-check ||
 #)
 
 # If everything passes... Now we can commit
-echo '🎉✨🚀 You win this time... I am committing this now. ✅✅✅✅'
+echo '🎉✨🚀 You win this time... I am committing this now. 🏄‍♂️🍻🌕'
 
 
 npx lint-staged
