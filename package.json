@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "eslint --fix \"**/*.{js,jsx,ts,tsx}\"",
+    "type-check": "tsc --noEmit",
     "prepare": "husky install"
   },
   "dependencies": {
