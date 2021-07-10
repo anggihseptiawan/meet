@@ -1,5 +1,10 @@
 import Head from 'next/head';
 import { Text, Box, SimpleGrid, Container, Avatar, HStack, Button, Flex } from '@chakra-ui/react';
+// import styled from "@emotion/styled"
+
+// const ImageWrapper = styled.div`
+//   margin-top: -40px;
+// `;
 
 export default function Home() {
   return (
@@ -11,7 +16,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <Container maxW="container.lg">
+        <Container maxW="container.xl">
           <Box p={6}>
             <Text fontSize="2xl" fontWeight="bold" align="center">
               👋 meet
@@ -23,16 +28,16 @@ export default function Home() {
               <Box>
                 <Avatar name="person" size="lg" src="https://bit.ly/dan-abramov" />
               </Box>
-              <HStack>
-                <Box mt={2}>
+              <HStack pt={6}>
+                <Box ml={-8} mr={6}>
                   <Avatar name="person" size="lg" src="https://bit.ly/dan-abramov" />
                 </Box>
-                <Box mt={2}>
+                <Box>
                   <Avatar name="person" size="lg" src="https://bit.ly/dan-abramov" />
                 </Box>
               </HStack>
             </Box>
-            <Box>
+            <Box pt={10}>
               <Text fontWeight="bold" fontSize="5xl" align="center" style={{ lineHeight: 1.2 }} pb={4}>
                 Group Chat for Everyone
               </Text>
