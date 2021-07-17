@@ -17,7 +17,12 @@ export default function Home() {
 
       <main>
         <Container maxW="container.lg">
-          <SimpleGrid columns={{md: 4, sm: 2}} gap="5" my={28}>
+          <Box display="flex" justifyContent="center" position="relative" mt={28} mb={6}>
+            <Box border="2px" borderColor="gray.200" display="flex" width="40px" height="40px" justifyContent="center" alignItems="center" borderRadius="full" _after={{content: '""', position: "absolute", top: "-59px", left: "49.85%", height: "60px", border: "2px solid #e2e8f0"}}>
+              <Text as="small" color="gray.600">01</Text>
+            </Box>
+          </Box>
+          <SimpleGrid columns={{md: 4, sm: 2}} gap="5" mb={28}>
             <Box>
               <Image src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWVldGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="image" rounded="md" />
             </Box>
@@ -32,7 +37,7 @@ export default function Home() {
             </Box>
           </SimpleGrid>
 
-          <Box display="flex" justifyContent="center" mb="28">
+          <Box display="flex" justifyContent="center" mb="36">
             <Box w={["100%", 300, 450]}>
               <Text fontSize="sm" fontWeight="bold" align="center" color="teal.500" mb="2">BUILD FOR MODERN USE</Text>
               <Text fontSize="4xl" lineHeight="1" fontWeight="700" align="center" mb="6">Smarter meetings, all in one place</Text>

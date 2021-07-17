@@ -38,49 +38,49 @@ export default function Header() {
                 <Box>
                   <Avatar
                     name="person"
-                     width={{md: "100px", sm: "60px"}}
-              height={{md: "100px", sm: "60px"}}
-                    src="https://images.unsplash.com/photo-1598461947262-153e592d4e72?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDIxfHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    width={{md: "100px", sm: "60px"}}
+                    height={{md: "100px", sm: "60px"}}
+                    src="https://images.unsplash.com/photo-1619016984980-703b4cf09515?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTE0fHxzbWlsZXklMjBmYWNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
                   />
                 </Box>
                 <Box>
                   <Avatar
                     name="person"
-                     width={{md: "100px", sm: "60px"}}
-              height={{md: "100px", sm: "60px"}}
-                    src="https://images.unsplash.com/photo-1598461947262-153e592d4e72?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDIxfHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                    width={{md: "100px", sm: "60px"}}
+                    height={{md: "100px", sm: "60px"}}
+                    src="https://images.unsplash.com/photo-1609699856548-1fb7fa468f0b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQxfHxzbWlsZXklMjBmYWNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
                   />
                 </Box>
               </HStack>
               <Box display="flex" justifyContent="center">
                 <Avatar
                   name="person"
-                   width={{md: "100px", sm: "60px"}}
-              height={{md: "100px", sm: "60px"}}
-                  src="https://images.unsplash.com/photo-1608513732982-e13d86139cb4?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDIyfHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                  width={{md: "100px", sm: "60px"}}
+                  height={{md: "100px", sm: "60px"}}
+                  src="https://images.unsplash.com/photo-1614436201459-156d322d38c6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDN8fHNtaWxleSUyMGZhY2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
                 />
               </Box>
             </Box>
-            <Box  mt={{md: "-60px", sm: "-30px"}}>
+            <Box  mt={{md: "-60px", sm: "-50px"}}>
               <HStack display="flex" justifyContent="space-between" mt={-10}>
                 <Box>
                   <Avatar
                     name="person"
-                     width={{md: "100px", sm: "60px"}}
-              height={{md: "100px", sm: "60px"}}
+                    width={{md: "100px", sm: "60px"}}
+                    height={{md: "100px", sm: "60px"}}
                     src="https://images.unsplash.com/photo-1552256469-acf9fd4feb50?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDMyfHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
                   />
                 </Box>
                 <Box>
                   <Avatar name="person"  width={{md: "100px", sm: "60px"}}
-              height={{md: "100px", sm: "60px"}} src="https://bit.ly/dan-abramov" />
+                  height={{md: "100px", sm: "60px"}} src="https://images.unsplash.com/photo-1611880147493-7542bdb0f024?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHNtaWxleSUyMGZhY2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" />
                 </Box>
               </HStack>
               <Box display="flex" justifyContent="center">
                 <Avatar
                   name="person"
-                   width={{md: "100px", sm: "60px"}}
-              height={{md: "100px", sm: "60px"}}
+                  width={{md: "100px", sm: "60px"}}
+                  height={{md: "100px", sm: "60px"}}
                   src="https://images.unsplash.com/flagged/photo-1568004614836-9a79797332da?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDI2fHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
                 />
               </Box>

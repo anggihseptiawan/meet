@@ -2,9 +2,14 @@ import { Box, Button, Container, Link, SimpleGrid, Text } from '@chakra-ui/react
 
 export default function Footer () {
   return (
+    <>
+    <Box display="flex" justifyContent="center" position="relative" bottom="-20px" zIndex={3} mt={20}>
+      <Box border="2px" borderColor="gray.200" background="white" display="flex" width="40px" height="40px" justifyContent="center" alignItems="center" borderRadius="full" _after={{content: '""', position: "absolute", top: "-59px", left: "49.85%", height: "60px", border: "2px solid #e2e8f0"}}>
+        <Text as="small" color="gray.600">02</Text>
+      </Box>
+    </Box>
     <footer style={{position: "relative", background: `url("/images/footer.jpg")`}}>
-    <Box py="16" mt="20" display="flex" _after={{ content: '""', position: "absolute", top: 0, left: 0, width: "100%",
-    height: "100%", background: "#0da4c6d1",}}>
+    <Box py="16" display="flex" _after={{ content: '""', position: "absolute", top: 0, left: 0, width: "100%", height: "100%", background: "#0da4c6d1",}}>
       <Container maxW="container.lg">
         <SimpleGrid columns={{md: 3, sm: 1}} style={{position: "relative", zIndex: 2}}>
           <Box mb="2">
@@ -30,5 +35,6 @@ export default function Footer () {
       </Container>
     </Box>
   </footer>
+  </>
   )
 }
