@@ -7,7 +7,7 @@ export default function Header() {
       <header>
         <Box pt={6} pb={10}>
           <Text fontSize="2xl" fontWeight="bold" align="center">
-            Meet 👋
+            Meetface 👋
           </Text>
         </Box>
 
