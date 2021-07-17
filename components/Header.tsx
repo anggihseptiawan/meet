@@ -32,7 +32,7 @@ export default function Header() {
               </Button>
             </Flex>
           </Box>
-          <Box mr={{md: -8, sm: 0}} flex="1" px={{md: 4, sm: 0}} pl={{md: 0, sm: 2}} order={{md: 3, sm: 2}}>
+          <Box mr={{md: -8, sm: 0}} flex="1" px={{md: 4, sm: 0}} pl={{md: 0, sm: 1}} order={{md: 3, sm: 2}}>
             <Box>
               <HStack display="flex" justifyContent="space-between" pt={12} mt={-10}>
                 <Box>

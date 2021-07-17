@@ -2,7 +2,7 @@ import { Avatar, Box, HStack } from '@chakra-ui/react';
 
 export default function ImageGroup  () {
   return(
-    <Box ml={{md: -8, sm: 0}} flex="1" px={{md: 4, sm: 0}} pr={{md: 0, sm: 2}}>
+    <Box ml={{md: -8, sm: 0}} flex="1" px={{md: 4, sm: 0}} pr={{md: 0, sm: 1}}>
       <Box>
         <Box display="flex" justifyContent="center">
           <Avatar name="person" width={{md: "100px", sm: "60px"}} height={{md: "100px", sm: "60px"}} src="https://images.unsplash.com/photo-1620713598996-ca76577be34b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fHNtaWxleSUyMGZhY2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" />
