@@ -31,7 +31,7 @@ export default function Footer () {
     </Box>
     <Box background="purple.500" py="4" position="relative" zIndex="2" opacity="0.9">
       <Container maxW="container.lg">
-        <Text as="small" color="white">2021 Anggih Septiawan | Designed by <Link href="https://www.frontendmentor.io/" target="_blank" color="teal.400">Frontend Mentor</Link> </Text>
+        <Text as="small" color="white">2021 Anggih Septiawan | Designed by <Link href="https://www.frontendmentor.io/" target="_blank" color="teal.100">Frontend Mentor</Link> </Text>
       </Container>
     </Box>
   </footer>
