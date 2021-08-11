@@ -1,10 +1,51 @@
+import { useEffect, useState } from 'react';
 import { Box, Container, Image, SimpleGrid, Text } from '@chakra-ui/react';
 import Head from 'next/head';
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
+interface ImageTypes {
+  data: string[];
+}
 
 export default function Home() {
+  const [imageUrl, setImageUrl] = useState<ImageTypes>();
+  const [ref, inView] = useInView({
+    threshold: 0,
+    triggerOnce: true
+  });
+
+  useEffect(() => {
+    fetch('./data/image.json')
+      .then(res => res.json() as Promise<ImageTypes>)
+      .then(data => setImageUrl(data));
+
+    console.log(inView);
+  }, [inView]);
+
+  const container = {
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.5,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
+    }
+  };
+
+  const MotionContainer = motion(SimpleGrid);
+
   return (
     <div>
       <Head>
@@ -18,30 +59,58 @@ export default function Home() {
       <main>
         <Container maxW="container.lg">
           <Box display="flex" justifyContent="center" position="relative" mt={28} mb={6}>
-            <Box border="2px" borderColor="gray.200" display="flex" width="40px" height="40px" justifyContent="center" alignItems="center" borderRadius="full" _after={{content: '""', position: "absolute", top: "-59px", left: "49.85%", height: "60px", border: "2px solid #e2e8f0"}}>
-              <Text as="small" color="gray.600">01</Text>
+            <Box
+              border="2px"
+              borderColor="gray.200"
+              display="flex"
+              width="40px"
+              height="40px"
+              justifyContent="center"
+              alignItems="center"
+              borderRadius="full"
+              _after={{
+                content: '""',
+                position: 'absolute',
+                top: '-59px',
+                left: '49.85%',
+                height: '60px',
+                border: '2px solid #e2e8f0'
+              }}
+            >
+              <Text as="small" color="gray.600">
+                01
+              </Text>
             </Box>
           </Box>
-          <SimpleGrid columns={{md: 4, sm: 2}} gap="5" mb={28}>
-            <Box>
-              <Image src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWVldGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="image" rounded="md" />
-            </Box>
-            <Box>
-              <Image src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bWVldGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="image" rounded="md" />
-            </Box>
-            <Box>
-              <Image src="https://images.unsplash.com/photo-1552581234-26160f608093?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG1lZXRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="image" rounded="md" />
-            </Box>
-            <Box>
-              <Image src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG1lZXRpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="image" rounded="md" />
-            </Box>
-          </SimpleGrid>
+          <div ref={ref}>
+            <MotionContainer
+              variants={container}
+              initial="hidden"
+              animate="visible"
+              columns={{ md: 4, sm: 2 }}
+              gap="5"
+              mb={28}
+            >
+              {imageUrl?.data?.map(image => (
+                <motion.div key={image} variants={item}>
+                  <Image src={image} alt="image" rounded="md" />
+                </motion.div>
+              ))}
+            </MotionContainer>
+          </div>
 
           <Box display="flex" justifyContent="center" mb="36">
-            <Box w={["100%", 300, 450]}>
-              <Text fontSize="sm" fontWeight="bold" align="center" color="teal.500" mb="2">BUILD FOR MODERN USE</Text>
-              <Text fontSize="4xl" lineHeight="1" fontWeight="700" align="center" mb="6">Smarter meetings, all in one place</Text>
-              <Text align="center" color="gray.400">Send messages, share files, show your screen, and record your meetings - all in one workspace. Control who can join with invite - only team access, data encryption, and data export. </Text>
+            <Box w={['100%', 300, 450]}>
+              <Text fontSize="sm" fontWeight="bold" align="center" color="teal.500" mb="2">
+                BUILD FOR MODERN USE
+              </Text>
+              <Text fontSize="4xl" lineHeight="1" fontWeight="700" align="center" mb="6">
+                Smarter meetings, all in one place
+              </Text>
+              <Text align="center" color="gray.400">
+                Send messages, share files, show your screen, and record your meetings - all in one workspace. Control
+                who can join with invite - only team access, data encryption, and data export.{' '}
+              </Text>
             </Box>
           </Box>
         </Container>
