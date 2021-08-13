@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Box, Container, Image, SimpleGrid, Text } from '@chakra-ui/react';
+import { Box, Button, Container, Image, SimpleGrid, Text } from '@chakra-ui/react';
 import Head from 'next/head';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
@@ -13,8 +13,8 @@ interface ImageTypes {
 export default function Home() {
   const [imageUrl, setImageUrl] = useState<ImageTypes>();
   const [ref, inView] = useInView({
-    threshold: 0,
-    triggerOnce: true
+    threshold: 0
+    // triggerOnce: true
   });
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function Home() {
       .then(res => res.json() as Promise<ImageTypes>)
       .then(data => setImageUrl(data));
 
-    console.log(inView);
+    console.log(`${inView} ${Date.now()}`);
   }, [inView]);
 
   const container = {
@@ -33,7 +33,8 @@ export default function Home() {
         delayChildren: 0.5,
         staggerChildren: 0.2
       }
-    }
+    },
+    hidden: { opacity: 0 }
   };
 
   const item = {
@@ -99,6 +100,14 @@ export default function Home() {
             </MotionContainer>
           </div>
 
+          <Button
+            colorScheme="teal"
+            onClick={() => {
+              throw new Error('Sentry Frontend Error');
+            }}
+          >
+            Throw Error
+          </Button>
           <Box display="flex" justifyContent="center" mb="36">
             <Box w={['100%', 300, 450]}>
               <Text fontSize="sm" fontWeight="bold" align="center" color="teal.500" mb="2">
